@@ -1,0 +1,134 @@
+body {
+    background: #7474e8; 
+    background: linear-gradient(135deg, #8ca3e3 0%, #bdc9f0 100%); 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif; 
+    color: #e0e0e0; 
+    overflow-x: hidden; 
+}
+
+
+.card {
+    background-color: rgba(25, 25, 40, 0.85); 
+    border-radius: 15px; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 123, 255, 0.3);
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+    border: 1px solid rgba(0, 123, 255, 0.2); 
+    animation: fadeInScale 0.8s ease-out; 
+}
+
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* Card Header */
+.card-header {
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradien biru yang menarik */
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    border-top-left-radius: 14px; /* Sesuai dengan border-radius card */
+    border-top-right-radius: 14px;
+    padding: 1.5rem; /* Ruang lebih di header */
+    position: relative;
+    overflow: hidden; /* Penting untuk efek pseudo-element */
+}
+
+/* Efek cahaya/kilau pada header */
+.card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.1), transparent);
+    pointer-events: none;
+}
+
+
+/* Form Controls (Input Fields) */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang input transparan */
+    border: 1px solid rgba(0, 123, 255, 0.4); /* Border biru neon */
+    color: #e0e0e0; /* Warna teks input */
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Transisi halus untuk semua properti */
+}
+
+.form-control::placeholder { /* Warna placeholder */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15); /* Sedikit lebih terang saat fokus */
+    border-color: #00bfff; /* Biru lebih terang saat fokus */
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.4); /* Efek 'glow' */
+    color: #ffffff; /* Pastikan teks tetap putih saat fokus */
+}
+
+/* Labels */
+label {
+    color: #a0a0a0; /* Warna label abu-abu terang */
+    font-weight: 500;
+}
+
+/* Buttons (Tombol) */
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #00bfff); /* Gradien tombol primer */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px; /* Spasi antar huruf */
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Bayangan tombol */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #00bfff, #007bff); /* Balik gradien saat hover */
+    transform: translateY(-2px); /* Sedikit naik saat hover */
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5); /* Bayangan lebih besar saat hover */
+}
+
+.btn-secondary {
+    background-color: #343a40; /* Warna abu-abu gelap untuk tombol sekunder */
+    border: 1px solid #495057;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #495057;
+    border-color: #5a6268;
+    transform: translateY(-1px); /* Sedikit naik saat hover */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Alert Messages */
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2); /* Latar belakang transparan merah */
+    color: #dc3545; /* Warna teks merah */
+    border-color: rgba(220, 53, 69, 0.4);
+    border-radius: 8px;
+}
+
+/* Link (misal 'Sudah punya akun? Login') */
+a.btn-secondary {
+    text-decoration: none; /* Hilangkan underline default */
+}
